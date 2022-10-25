@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
 
-const generateAppleToken = () => {
+export const generateAppleToken = () => {
     const clientId = process.env.APPLE_CLIENT_ID;
     const teamId = process.env.APPLE_TEAM_ID;
     const keyId = process.env.APPLE_KEY_ID;
@@ -24,5 +24,3 @@ const generateAppleToken = () => {
     }));
 
 }
-
-generateAppleToken()
